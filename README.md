@@ -1,6 +1,5 @@
-<img src='https://github.com/sebacipolat/LoginEspresso/blob/master/ic_launcher.png' height="100"/>
 
-## LoginEspresso
+## FbComments
 ###### by Sebastian Cipolat
 [@seba_cipolat](http://twitter.com/seba_cipolat)
 
@@ -8,12 +7,19 @@
 
 [sebastiancipolat Linkedin](www.linkedin.com/in/sebastiancipolat)
 
-A simple login screen with espressop ui test scripts.
+A simple way to show embebed facebook comments social plugin into a Android app
 (In development)
 
-**Home**
+**Load**
 
-<img src='https://github.com/sebacipolat/LoginEspresso/blob/master/screenshot.png' width="250"/>
+<img src='https://github.com/sebacipolat/FbComments/blob/master/load.png' width="250"/>
+
+
+**Commentaries loaded**
+
+<img src='https://github.com/sebacipolat/FbComments/blob/master/comments.png' width="250"/>
+
+Demostration purpose only, not a completed app.
 
 Demostration purpose only, not a completed app.
 
