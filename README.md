@@ -15,13 +15,14 @@ Facebook don't provide any native way to get the comments from a commentary box.
 
 **Usage**
 
-
- `<com.cipolat.FbCommentsView.FbCommentsView`
-        `android:id="@+id/commentsView"`
-        `android:layout_width="match_parent"`
-        `android:layout_height="match_parent"`
-        `app:layout_behavior="@string/appbar_scrolling_view_behavior"`
- `/>`
+```xml
+ <com.cipolat.FbCommentsView.FbCommentsView
+        android:id="@+id/commentsView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+/>
+```
  
  You need to set an targer url and Facebook AppID
  
