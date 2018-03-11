@@ -26,8 +26,8 @@ Facebook don't provide any native way to get the comments from a commentary box.
  You need to set an targer url and Facebook AppID
  
  `FbCommentsView commentsView =findByViewID(R.id.coometns_view)
-  String postUrl="";//Set an url target
-  String fbAppID="";//Set your FB AppID
+  String postUrl= URL TARGET
+  String fbAppID=FB APP ID
 
   FbConfig config=new FbConfig(fbAppID,postUrl);
   commentsView.loadData(config);`
