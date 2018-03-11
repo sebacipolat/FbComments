@@ -5,8 +5,10 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
-import com.cipolat.fbcomments.UI.CustomView.FbCommentsView;
-import com.cipolat.fbcomments.UI.CustomView.FbConfig;
+import android.view.MenuItem;
+
+import com.cipolat.FbCommentsView.FbCommentsView;
+import com.cipolat.FbCommentsView.FbConfig;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -23,8 +25,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
         setToolbar();
+
+        //Set an url target
         String postUrl="https://pedidosonline-357d1.firebaseapp.com/comments.html";
-        String fbAppID="220403711853240";
+
+        String fbAppID="220403711853240";//SET your FB AppID
+
         FbConfig config=new FbConfig(fbAppID,postUrl);
         commentsView.loadData(config);
     }
@@ -35,15 +41,22 @@ public class MainActivity extends AppCompatActivity {
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayShowTitleEnabled(false);
             mToolbar.setTitle(getString(R.string.home_title));
-
         }
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.comments_menu, menu);
         return true;
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.refresh:
+                commentsView.reload();
+                break;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 }

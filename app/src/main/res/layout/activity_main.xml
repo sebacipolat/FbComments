@@ -21,9 +21,10 @@
             android:elevation="8dp" />
     </android.support.design.widget.AppBarLayout>
 
-    <com.cipolat.fbcomments.UI.CustomView.FbCommentsView
+    <com.cipolat.FbCommentsView.FbCommentsView
         android:id="@+id/commentsView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+ />
 </android.support.design.widget.CoordinatorLayout>

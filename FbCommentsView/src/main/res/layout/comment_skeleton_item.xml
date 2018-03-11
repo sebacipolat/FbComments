@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <View
+        android:id="@+id/view_box_lbl11"
+        android:layout_width="50dp"
+        android:layout_height="9dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/grey_ligth_holder"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/view_box_lbl10"
+        app:layout_constraintTop_toBottomOf="@+id/view_box_lbl10" />
+
+    <View
+        android:id="@+id/view_box_lbl10"
+        android:layout_width="250dp"
+        android:layout_height="9dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/grey_ligth_holder"
+        app:layout_constraintStart_toStartOf="@+id/view_box_lbl7"
+        app:layout_constraintTop_toBottomOf="@+id/view_box_lbl7" />
+
+    <View
+        android:id="@+id/view_box_lbl7"
+        android:layout_width="250dp"
+        android:layout_height="12dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/grey_ligth_holder"
+        app:layout_constraintStart_toStartOf="@+id/view_box_lbl6"
+        app:layout_constraintTop_toBottomOf="@+id/view_box_lbl6" />
+
+    <View
+        android:id="@+id/view_box_lbl6"
+        android:layout_width="80dp"
+        android:layout_height="12dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@color/grey_ligth_holder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toEndOf="@+id/view_box_image" />
+
+    <View
+        android:id="@+id/view_box_image"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@color/grey_ligth_holder" />
+
+</android.support.constraint.ConstraintLayout>

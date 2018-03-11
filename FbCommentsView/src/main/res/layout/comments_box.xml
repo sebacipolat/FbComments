@@ -11,18 +11,19 @@
         android:layout_gravity="center_horizontal"
         android:visibility="gone" />
 
-    <com.cipolat.fbcomments.UI.CustomView.CommentSkeletonView
+    <com.cipolat.FbCommentsView.CommentSkeletonView
         android:id="@+id/commentSkeleton"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
     <ProgressBar
         android:id="@+id/progressBar"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_gravity="center"
         android:layout_marginBottom="10dp"
         android:indeterminateTint="@color/colorPrimary"
         android:indeterminateTintMode="src_atop"
-        android:visibility="gone" />
+        android:visibility="gone"
+         />
 </FrameLayout>
