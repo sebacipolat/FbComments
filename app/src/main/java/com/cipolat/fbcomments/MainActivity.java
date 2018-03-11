@@ -6,7 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-
 import com.cipolat.FbCommentsView.FbCommentsView;
 import com.cipolat.FbCommentsView.FbConfig;
 import butterknife.BindView;
@@ -26,10 +25,10 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
         setToolbar();
 
-        //Set an url target
-        String postUrl="https://pedidosonline-357d1.firebaseapp.com/comments.html";
 
-        String fbAppID="220403711853240";//SET your FB AppID
+        String postUrl="";//Set an url target
+
+        String fbAppID="";//SET your FB AppID
 
         FbConfig config=new FbConfig(fbAppID,postUrl);
         commentsView.loadData(config);
