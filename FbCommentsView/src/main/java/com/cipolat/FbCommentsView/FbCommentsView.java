@@ -211,13 +211,12 @@ public class FbCommentsView extends FrameLayout {
         return mListener;
     }
 
-    public void setmListener(LoadingListener mListener) {
+    public void setListener(LoadingListener mListener) {
         this.mListener = mListener;
     }
 
-    interface LoadingListener {
+    public interface LoadingListener {
         void onError();
-
         void onLoadingReady();
     }
 }

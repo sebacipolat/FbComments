@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import com.cipolat.FbCommentsView.FbCommentsView;
@@ -11,7 +12,7 @@ import com.cipolat.FbCommentsView.FbConfig;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements FbCommentsView.LoadingListener {
     @BindView(R.id.toolbar)
     Toolbar mToolbar;
 
@@ -29,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
         String postUrl="";//Set an url target
 
         String fbAppID="";//SET your FB AppID
+
+        commentsView.setListener(this);
 
         FbConfig config=new FbConfig(fbAppID,postUrl);
         commentsView.loadData(config);
@@ -57,5 +60,15 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onError() {
+        Log.e("onError"," Error Loading");
+    }
+
+    @Override
+    public void onLoadingReady() {
+        Log.i("onLoadingReady"," All OK");
     }
 }
