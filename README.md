@@ -7,8 +7,40 @@
 
 [sebastiancipolat Linkedin](www.linkedin.com/in/sebastiancipolat)
 
-A simple way to show embebed facebook comments social plugin into a Android app
-(In development)
+A simple way to show embebed facebook comments social plugin into a Android app.
+This View is based on WebView.
+Facebook don't provide any native way to get the comments from a commentary box.
+
+
+
+**Usage**
+
+
+ `<com.cipolat.FbCommentsView.FbCommentsView
+        android:id="@+id/commentsView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+ />`
+ 
+ You need to set an targer url and Facebook AppID
+ 
+ `FbCommentsView commentsView =findByViewID(R.id.coometns_view)
+  String postUrl="";//Set an url target
+  String fbAppID="";//Set your FB AppID
+
+  FbConfig config=new FbConfig(fbAppID,postUrl);
+  commentsView.loadData(config);`
+  
+  use .loadData and pass FbConfig to load the comments
+ 
+ See also
+ [https://developers.facebook.com/docs/plugins/comments/] https://developers.facebook.com/docs/plugins/comments/
+ 
+ Callback 
+ 
+ use setListener to receive the callback when the load fails or load ok.
+ 
 
 **Load**
 
